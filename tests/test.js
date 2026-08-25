@@ -13,7 +13,7 @@ function test(name, condition) {
 console.log("Running Todo Application Tests...\n");
 
 // Test 1: index.html exists
-const htmlPath = path.join(__dirname, "..", "src", "index.html");
+const htmlPath = path.join(__dirname, "..", "SRC", "index.html");
 
 test(
     "index.html exists",
@@ -21,7 +21,7 @@ test(
 );
 
 // Test 2: style.css exists
-const cssPath = path.join(__dirname, "..", "src", "style.css");
+const cssPath = path.join(__dirname, "..", "SRC", "style.css");
 
 test(
     "style.css exists",
@@ -32,7 +32,7 @@ test(
 const jsPath = path.join(
     __dirname,
     "..",
-    "src",
+    "SRC",
     "scripts",
     "app.js"
 );
