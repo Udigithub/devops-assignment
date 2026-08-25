@@ -1,15 +1,26 @@
 {
   "name": "devops-assignment",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Todo Application - Advanced Git and DevOps Assignment",
+  "main": "src/index.html",
   "scripts": {
-    "dev": "http-server"
+    "dev": "http-server ./src",
+    "lint": "htmlhint \"src/**/*.html\" && stylelint \"src/**/*.css\"",
+    "build": "shx rm -rf dist && shx mkdir -p dist && shx cp -r src/* dist/",
+    "test": "echo \"Running Todo application tests...\" && node tests/test.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "todo",
+    "devops",
+    "github-actions"
+  ],
+  "author": "Uditha Madhushanka",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "htmlhint": "^1.9.2",
+    "http-server": "^14.1.1",
+    "shx": "^0.4.0",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^36.0.1"
   }
 }
