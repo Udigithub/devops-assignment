@@ -1,3 +1,4 @@
+```yaml
 name: CI Pipeline
 
 on:
@@ -5,10 +6,12 @@ on:
     branches:
       - main
       - develop
+      - feature/deployment
   pull_request:
     branches:
       - main
       - develop
+      - feature/deployment
 
 jobs:
   test:
@@ -32,3 +35,7 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Build application
+        run: npm run build
+```
