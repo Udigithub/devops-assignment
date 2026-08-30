@@ -6,6 +6,8 @@ on:
       - main
       - develop
       - feature/deployment
+      - feature/todo-functionality
+
   pull_request:
     branches:
       - main
